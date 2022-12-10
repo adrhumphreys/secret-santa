@@ -25,7 +25,7 @@ const App = () => {
 
       {match && guesses < 3 && (
         <div className="sm:mx-auto sm:w-full sm:max-w-md mt-4">
-          <div className="rounded-md bg-green-50 py-4 px-4 shadow sm:rounded-lg  sm:px-10">
+          <div className="bg-green-50 py-4 px-4 shadow rounded-lg  sm:px-10">
             <p className=" text-green-800">
               Congratulations {match.name}, you're buying a present for{" "}
               {match.match} 🎁
@@ -36,7 +36,7 @@ const App = () => {
 
       {guesses >= 3 && (
         <div className="sm:mx-auto sm:w-full sm:max-w-md mt-4">
-          <div className="rounded-md bg-yellow-50 py-4 px-4 shadow sm:rounded-lg  sm:px-10">
+          <div className="bg-yellow-50 py-4 px-4 shadow rounded-lg  sm:px-10">
             <p className=" text-yellow-800">You've been naughty 🥵</p>
           </div>
         </div>
@@ -44,14 +44,14 @@ const App = () => {
 
       {!match && password && guesses < 3 && (
         <div className="sm:mx-auto sm:w-full sm:max-w-md mt-4">
-          <div className="rounded-md bg-red-50 py-4 px-4 shadow sm:rounded-lg  sm:px-10">
+          <div className="bg-red-50 py-4 px-4 shadow rounded-lg  sm:px-10">
             <p className=" text-red-800">You've put in the wrong password 😭</p>
           </div>
         </div>
       )}
 
       <div className="mt-8 sm:mx-auto sm:w-full sm:max-w-md">
-        <div className="bg-white py-8 px-4 shadow sm:rounded-lg sm:px-10">
+        <div className="bg-white py-8 px-4 shadow rounded-lg sm:px-10">
           <form
             onSubmit={(e) => {
               e.preventDefault();
@@ -94,7 +94,7 @@ const App = () => {
       </div>
 
       <div className="mt-8 sm:mx-auto sm:w-full sm:max-w-md">
-        <div className="bg-white py-8 px-4 shadow sm:rounded-lg sm:px-10">
+        <div className="bg-white py-8 px-4 shadow rounded-lg sm:px-10">
           <p>People</p>
           <ul className="list-disc pl-6 pt-1">
             {people.map((p) => (
