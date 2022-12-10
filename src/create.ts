@@ -3,6 +3,16 @@ export type Person = {
   group?: string;
 } & Record<string, string>;
 
+const people: Person[] = [
+  { name: "Adrian", group: "k&a", password: "ah" },
+  { name: "Kelly", group: "k&a", password: "kellogs" },
+  { name: "Laura", group: "L&L", password: "lowri" },
+  { name: "Clinton", group: "C", password: "patty" },
+  { name: "Luke", group: "L&L", password: "luc" },
+  { name: "Keith", group: "L&K", password: "quiche" },
+  { name: "Lee", group: "L&K", password: "mumma" },
+];
+
 function shuffle<T = any>(array: T[]) {
   let i = array.length;
   let j;
@@ -74,16 +84,6 @@ function calculate(people: Person[]): Person[] {
     return buffer2[personIndex];
   });
 }
-
-const people: Person[] = [
-  { name: "Adrian", group: "k&a", password: "adrian" },
-  { name: "Kelly", group: "k&a", password: "kellogs" },
-  { name: "Laura", group: "L&L", password: "lowri" },
-  { name: "Clinton", group: "C", password: "clinterella" },
-  { name: "Luke", group: "L&L", password: "luc" },
-  { name: "Keith", group: "L&K", password: "quiche" },
-  { name: "Lee", group: "L&K", password: "le" },
-];
 
 const createMatches = () => {
   const matches = calculate(people).map<{ name: string; match: string }>(

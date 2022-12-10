@@ -1,9 +1,1 @@
-export const people = [
-  { name: "Adrian", match: "Laura", password: "adrian" },
-  { name: "Kelly", match: "Lee", password: "kellogs" },
-  { name: "Laura", match: "Clinton", password: "lowri" },
-  { name: "Clinton", match: "Keith", password: "clinterella" },
-  { name: "Luke", match: "Adrian", password: "luc" },
-  { name: "Keith", match: "Kelly", password: "quiche" },
-  { name: "Lee", match: "Luke", password: "le" },
-];
+export const people = [{"name":"Adrian","match":"Keith","password":"ah"},{"name":"Kelly","match":"Laura","password":"kellogs"},{"name":"Laura","match":"Lee","password":"lowri"},{"name":"Clinton","match":"Kelly","password":"patty"},{"name":"Luke","match":"Clinton","password":"luc"},{"name":"Keith","match":"Luke","password":"quiche"},{"name":"Lee","match":"Adrian","password":"mumma"}]
