@@ -19,7 +19,7 @@ const App = () => {
       <div className="sm:mx-auto sm:w-full sm:max-w-md">
         <p className="text-center text-3xl">🧑‍🎄</p>
         <h2 className="mt-6 text-center text-3xl font-bold tracking-tight text-gray-900">
-          Get your secret santa
+          Secret santa
         </h2>
       </div>
 
@@ -27,8 +27,8 @@ const App = () => {
         <div className="sm:mx-auto sm:w-full sm:max-w-md mt-4">
           <div className="bg-green-50 py-4 px-4 shadow rounded-lg  sm:px-10">
             <p className=" text-green-800">
-              Congratulations {match.name}, you're buying a present for{" "}
-              {match.match} 🎁
+              {match.name}, you're buying a present for{" "}
+              <span className="font-bold">{match.match}</span> 🎁
             </p>
           </div>
         </div>
@@ -86,7 +86,7 @@ const App = () => {
                 type="button"
                 className="flex w-full justify-center rounded-md border border-transparent bg-indigo-600 py-2 px-4 text-sm font-medium text-white shadow-sm hover:bg-indigo-700 focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:ring-offset-2"
               >
-                Give me
+                Submit
               </button>
             </div>
           </form>
@@ -95,19 +95,23 @@ const App = () => {
 
       <div className="mt-8 sm:mx-auto sm:w-full sm:max-w-md">
         <div className="bg-white py-8 px-4 shadow rounded-lg sm:px-10">
-          <p>People</p>
+          <p>Who's included:</p>
           <ul className="list-disc pl-6 pt-1">
-            {people.map((p) => (
-              <li className="text-sm" key={p.name}>
-                <p>{p.name}</p>
-              </li>
-            ))}
+            {people
+              .map((p) => p.name)
+              .sort()
+              .reverse()
+              .map((name) => (
+                <li className="text-sm" key={name}>
+                  <p>{name}</p>
+                </li>
+              ))}
           </ul>
         </div>
       </div>
 
       <div className="mt-8 sm:mx-auto sm:w-full sm:max-w-md">
-        <p className="text-center">Kelly smells 🤕</p>
+        <p className="text-center text-gray-500">2024 edition</p>
       </div>
     </div>
   );
